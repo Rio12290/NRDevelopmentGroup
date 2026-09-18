@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Previous Projects | NR Development Group</title>
+<meta name="description" content="Completed remodeling and construction projects by NR Development Group LLC across Southeast Texas, including bathroom remodels, kitchens, structural repair, and outdoor builds.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1E3A;--gold:#C9A24B;--gold-2:#E2C47A;--ink:#1B2230;--muted:#5B6474;--soft:#F5F3EE;--line:#E4E0D6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2;color:var(--navy)}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.btn{display:inline-block;padding:14px 26px;border-radius:4px;font-weight:600;font-size:.95rem}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-2)}
+header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(201,162,75,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff}
+.mark{height:44px;width:auto;display:block}
+.logo-text{line-height:1.1}
+.logo-text strong{display:block;font-family:"Playfair Display",serif;font-size:1.05rem;letter-spacing:.04em}
+.logo-text span{font-size:.62rem;letter-spacing:.3em;color:var(--gold)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{color:#D8DDE6;font-size:.9rem;font-weight:500}
+.links a:hover,.links a.on{color:var(--gold)}
+.links .btn{padding:10px 18px;color:var(--navy)}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+.top{background:linear-gradient(135deg,rgba(14,30,58,.97),rgba(22,41,77,.92));color:#fff;padding:78px 0}
+.top h1{color:#fff;font-size:clamp(2rem,4.4vw,3rem);margin:14px 0 16px}
+.top p{color:#C3CAD6;max-width:640px}
+.project{padding:70px 0;border-bottom:1px solid var(--line)}
+.project:last-of-type{border-bottom:0}
+.p-head{max-width:760px;margin-bottom:30px}
+.p-head h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+.p-head .meta{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:8px 0 12px}
+.p-head p{color:var(--muted)}
+.p-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.p-grid.four{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.shot{position:relative;margin:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in}
+.shot img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .3s}
+.shot:hover img{transform:scale(1.04)}
+.shot figcaption{padding:12px 14px;font-size:.85rem;color:var(--muted)}
+.pill{position:absolute;top:10px;left:10px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:3px;color:#fff}
+.pill.before{background:#8A3A2E}.pill.after{background:#2F6B4F}.pill.during{background:#5B6474}
+.video{background:var(--soft);padding:80px 0}
+.video video{width:100%;border-radius:8px;display:block;border:1px solid var(--line)}
+.v-head{max-width:640px;margin-bottom:28px}
+.v-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 12px}
+.v-head p{color:var(--muted)}
+.cta-band{background:var(--navy);color:#fff;padding:70px 0;text-align:center}
+.cta-band h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
+.cta-band p{color:#AEB7C6;margin-bottom:26px}
+footer{background:#0A1629;color:#8B95A7;padding:28px 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center}
+footer img{height:70px;width:auto;display:block;opacity:.95}
+#lb{position:fixed;inset:0;background:rgba(8,14,26,.94);display:none;place-items:center;z-index:100;padding:24px}
+#lb.on{display:grid}
+#lb img{max-width:100%;max-height:86vh;border-radius:6px}
+#lb .cap{color:#C3CAD6;text-align:center;margin-top:14px;font-size:.9rem}
+#lb .x{position:absolute;top:18px;right:26px;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+@media (max-width:900px){
+ .links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--navy);flex-direction:column;padding:20px;gap:18px}
+ .links.open{display:flex}
+ .menu-btn{display:block}
+ .project{padding:50px 0}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <img src="logo-mark-light.png" alt="NR Development Group" class="mark">
+      <div class="logo-text"><strong>NR DEVELOPMENT</strong><span>GROUP LLC</span></div>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">&#9776;</button>
+    <nav class="links">
+      <a href="index.html#services">Services</a>
+      <a href="projects.html" class="on">Previous Projects</a>
+      <a href="detailing.html">Fleet Detailing</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#contact" class="btn btn-gold">Get an Estimate</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="top">
+  <div class="wrap">
+    <div class="eyebrow">Our Work</div>
+    <h1>Previous projects</h1>
+    <p>Finished work from homes and properties across Southeast Texas. Where we have them, the before photos are included, because the starting point is half the story.</p>
+  </div>
+</section>
+<div class="wrap">
+  <article class="project">
+    <div class="p-head">
+      <h2>Full Bathroom Remodel</h2>
+      <div class="meta">West of Beaumont · 2026</div>
+      <p>Tub, tile, vanity, and flooring taken down to the studs and rebuilt. The before shots are what the homeowner was living with.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./bath-remodel-01.jpg" alt="Before — original tub area" loading="lazy"><span class="pill before">Before</span><figcaption>Before — original tub area</figcaption></figure>
+      <figure class="shot"><img src="./bath-remodel-02.jpg" alt="Before — dated shower" loading="lazy"><span class="pill before">Before</span><figcaption>Before — dated shower</figcaption></figure>
+      <figure class="shot"><img src="./bath-remodel-03.jpg" alt="During — new tub set, walls prepped" loading="lazy"><span class="pill during">During</span><figcaption>During — new tub set, walls prepped</figcaption></figure>
+      <figure class="shot"><img src="./bath-remodel-04.jpg" alt="After — marble floor and new vanity" loading="lazy"><span class="pill after">After</span><figcaption>After — marble floor and new vanity</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Wall Rot Repair &amp; Re-Siding</h2>
+      <div class="meta">Nederland / Port Arthur area · 2026</div>
+      <p>Rotted exterior wall opened up, damaged framing replaced, and closed back in with new siding. Structural work, not a cover-up.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./wall-rot-01.jpg" alt="Before — rotted exterior wall" loading="lazy"><span class="pill before">Before</span><figcaption>Before — rotted exterior wall</figcaption></figure>
+      <figure class="shot"><img src="./wall-rot-02.jpg" alt="During — removing damaged framing" loading="lazy"><span class="pill during">During</span><figcaption>During — removing damaged framing</figcaption></figure>
+      <figure class="shot"><img src="./wall-rot-03.jpg" alt="During — new framing in" loading="lazy"><span class="pill during">During</span><figcaption>During — new framing in</figcaption></figure>
+      <figure class="shot"><img src="./wall-rot-04.jpg" alt="After — new siding installed" loading="lazy"><span class="pill after">After</span><figcaption>After — new siding installed</figcaption></figure>
+      <figure class="shot"><img src="./wall-rot-05.jpg" alt="After — full elevation" loading="lazy"><span class="pill after">After</span><figcaption>After — full elevation</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Outdoor Pavilion Build</h2>
+      <div class="meta">2026</div>
+      <p>Ground-up build on a private property: posts set, slab poured, beams and site-built trusses raised, metal roof installed.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./pavilion-01.jpg" alt="Posts set" loading="lazy"><figcaption>Posts set</figcaption></figure>
+      <figure class="shot"><img src="./pavilion-02.jpg" alt="Slab poured" loading="lazy"><figcaption>Slab poured</figcaption></figure>
+      <figure class="shot"><img src="./pavilion-03.jpg" alt="Posts on finished slab" loading="lazy"><figcaption>Posts on finished slab</figcaption></figure>
+      <figure class="shot"><img src="./pavilion-04.jpg" alt="Beams set" loading="lazy"><figcaption>Beams set</figcaption></figure>
+      <figure class="shot"><img src="./pavilion-06.jpg" alt="Trusses framed" loading="lazy"><figcaption>Trusses framed</figcaption></figure>
+      <figure class="shot"><img src="./pavilion-07.jpg" alt="Metal roof going on" loading="lazy"><figcaption>Metal roof going on</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Kitchen — Quartz &amp; Subway Tile</h2>
+      <div class="meta">2026</div>
+      <p>Quartz countertops, tile backsplash, and finish work around a new cooktop and vent hood.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./kitchen-gray-01.jpg" alt="Quartz countertops set" loading="lazy"><figcaption>Quartz countertops set</figcaption></figure>
+      <figure class="shot"><img src="./kitchen-gray-02.jpg" alt="Countertops and cooktop run" loading="lazy"><figcaption>Countertops and cooktop run</figcaption></figure>
+      <figure class="shot"><img src="./kitchen-gray-04.jpg" alt="Tile backsplash and vent hood" loading="lazy"><figcaption>Tile backsplash and vent hood</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Kitchen — Granite Island &amp; Wall Ovens</h2>
+      <div class="meta">Beaumont · 2025</div>
+      <p>Full kitchen with granite island, wall ovens, vent hood, and a coffee bar run.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./kitchen-white-01.jpg" alt="Finished kitchen" loading="lazy"><figcaption>Finished kitchen</figcaption></figure>
+      <figure class="shot"><img src="./kitchen-white-02.jpg" alt="Granite island and wall ovens" loading="lazy"><figcaption>Granite island and wall ovens</figcaption></figure>
+      <figure class="shot"><img src="./kitchen-white-03.jpg" alt="Coffee bar run" loading="lazy"><figcaption>Coffee bar run</figcaption></figure>
+      <figure class="shot"><img src="./kitchen-white-04.jpg" alt="Island and vent hood" loading="lazy"><figcaption>Island and vent hood</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Plank Ceiling, Beams &amp; Fireplace</h2>
+      <div class="meta">Beaumont · 2025</div>
+      <p>Interior carpentry: plank ceiling with exposed beams, built-in shelving, and a brick fireplace with mantel.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./wood-ceiling-01.jpg" alt="Plank ceiling and beams" loading="lazy"><figcaption>Plank ceiling and beams</figcaption></figure>
+      <figure class="shot"><img src="./wood-ceiling-02.jpg" alt="Ceiling and built-in shelving" loading="lazy"><figcaption>Ceiling and built-in shelving</figcaption></figure>
+      <figure class="shot"><img src="./wood-ceiling-03.jpg" alt="Finished ceiling" loading="lazy"><figcaption>Finished ceiling</figcaption></figure>
+      <figure class="shot"><img src="./wood-ceiling-04.jpg" alt="Brick fireplace and mantel" loading="lazy"><figcaption>Brick fireplace and mantel</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Pool Deck Restoration</h2>
+      <div class="meta">Beaumont · 2025</div>
+      <p>Deck repair, forming and pouring, and a full pressure wash.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./pool-deck-01.jpg" alt="Pool deck" loading="lazy"><figcaption>Pool deck</figcaption></figure>
+      <figure class="shot"><img src="./pool-deck-02.jpg" alt="Forms and pour prep" loading="lazy"><figcaption>Forms and pour prep</figcaption></figure>
+      <figure class="shot"><img src="./pool-deck-03.jpg" alt="Pressure washing" loading="lazy"><figcaption>Pressure washing</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Popcorn Ceiling Removal &amp; Retexture</h2>
+      <div class="meta">2025</div>
+      <p>Popcorn ceiling scraped off, ceilings retextured and sprayed, then finish coats throughout. The whole kitchen was masked off first to protect cabinets, counters, and floors.</p>
+    </div>
+    <div class="p-grid">
+      <figure class="shot"><img src="./painting-01.jpg" alt="Floors and cabinets masked before the scrape" loading="lazy"><figcaption>Floors and cabinets masked before the scrape</figcaption></figure>
+      <figure class="shot"><img src="./painting-02.jpg" alt="Room sealed off, popcorn ceiling removed" loading="lazy"><figcaption>Room sealed off, popcorn ceiling removed</figcaption></figure>
+      <figure class="shot"><img src="./painting-03.jpg" alt="Spraying the new ceiling texture" loading="lazy"><figcaption>Spraying the new ceiling texture</figcaption></figure>
+    </div>
+  </article>
+  <article class="project">
+    <div class="p-head">
+      <h2>Finishes &amp; Details</h2>
+      <div class="meta">Tile, flooring, cabinetry and stonework</div>
+      <p>Individual finishes from jobs across Southeast Texas.</p>
+    </div>
+    <div class="p-grid four">
+      <figure class="shot"><img src="./finishes-01.jpg" alt="Marble tub surround with arabesque band" loading="lazy"><figcaption>Marble tub surround with arabesque band</figcaption></figure>
+      <figure class="shot"><img src="./finishes-02.jpg" alt="White marble surround with niche" loading="lazy"><figcaption>White marble surround with niche</figcaption></figure>
+      <figure class="shot"><img src="./finishes-03.jpg" alt="Gray tile surround and floor" loading="lazy"><figcaption>Gray tile surround and floor</figcaption></figure>
+      <figure class="shot"><img src="./finishes-04.jpg" alt="Gray tile surround at window" loading="lazy"><figcaption>Gray tile surround at window</figcaption></figure>
+      <figure class="shot"><img src="./finishes-05.jpg" alt="Marble shower with green accent" loading="lazy"><figcaption>Marble shower with green accent</figcaption></figure>
+      <figure class="shot"><img src="./finishes-06.jpg" alt="Corner shower with pebble pan" loading="lazy"><figcaption>Corner shower with pebble pan</figcaption></figure>
+      <figure class="shot"><img src="./finishes-07.jpg" alt="Black hex tile floor" loading="lazy"><figcaption>Black hex tile floor</figcaption></figure>
+      <figure class="shot"><img src="./finishes-08.jpg" alt="Marble-look tile entry" loading="lazy"><figcaption>Marble-look tile entry</figcaption></figure>
+      <figure class="shot"><img src="./finishes-09.jpg" alt="Wood-look plank tile" loading="lazy"><figcaption>Wood-look plank tile</figcaption></figure>
+      <figure class="shot"><img src="./finishes-10.jpg" alt="Acacia hardwood" loading="lazy"><figcaption>Acacia hardwood</figcaption></figure>
+      <figure class="shot"><img src="./finishes-11.jpg" alt="LVP in lakefront room" loading="lazy"><figcaption>LVP in lakefront room</figcaption></figure>
+      <figure class="shot"><img src="./finishes-12.jpg" alt="White shaker cabinets, gray backsplash" loading="lazy"><figcaption>White shaker cabinets, gray backsplash</figcaption></figure>
+      <figure class="shot"><img src="./finishes-13.jpg" alt="Counter run and backsplash" loading="lazy"><figcaption>Counter run and backsplash</figcaption></figure>
+      <figure class="shot"><img src="./finishes-14.jpg" alt="Island build on brick-look tile" loading="lazy"><figcaption>Island build on brick-look tile</figcaption></figure>
+      <figure class="shot"><img src="./finishes-15.jpg" alt="Brick outdoor fireplace" loading="lazy"><figcaption>Brick outdoor fireplace</figcaption></figure>
+      <figure class="shot"><img src="./finishes-16.jpg" alt="Stone and brick fireplace under pavilion" loading="lazy"><figcaption>Stone and brick fireplace under pavilion</figcaption></figure>
+    </div>
+  </article></div>
+
+<section class="video" id="aerial">
+  <div class="wrap">
+    <div class="v-head">
+      <div class="eyebrow">Aerial</div>
+      <h2>Drone filming &amp; aerial photography</h2>
+      <p>We fly properties for marketing, progress documentation, and roof or site surveys. Available as a standalone service or as part of a project.</p>
+    </div>
+    <video controls preload="none" poster="./drone-poster.jpg" playsinline>
+      <source src="./drone-flyover.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Have a project like one of these?</h2>
+    <p>Tell us what you're planning and we'll come walk the site.</p>
+    <a href="index.html#contact" class="btn btn-gold">Request a Free Estimate</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <img src="logo-full-light.png" alt="NR Development Group LLC">
+    <span>&copy; <span id="yr"></span> NR Development Group LLC. All rights reserved.</span>
+    <span>Nederland, Texas</span>
+  </div>
+</footer>
+<div id="lb"><span class="x">&times;</span><div><img id="lbi" alt=""><div class="cap" id="lbc"></div></div></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links').classList.remove('open')));
+var lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc');
+document.querySelectorAll('.shot').forEach(function(s){
+  s.addEventListener('click',function(){
+    var img=s.querySelector('img'); lbi.src=img.src; lbi.alt=img.alt;
+    var c=s.querySelector('figcaption'); lbc.textContent=c?c.textContent:'';
+    lb.classList.add('on');
+  });
+});
+function close_(){lb.classList.remove('on'); lbi.src='';}
+lb.addEventListener('click',close_);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close_();});
+</script>
+</body>
+</html>

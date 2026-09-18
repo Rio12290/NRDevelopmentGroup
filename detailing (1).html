@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet & Vehicle Detailing | N&N Make Ready Services</title>
+<meta name="description" content="Commercial fleet detailing, dealership make ready, and vehicle detailing across Southeast Texas and Greater Houston. Volume-based tiered pricing.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1E3A;--navy-2:#16294D;--gold:#C9A24B;--gold-2:#E2C47A;--ink:#1B2230;--muted:#5B6474;--bg:#FFFFFF;--soft:#F5F3EE;--line:#E4E0D6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2;color:var(--navy)}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.btn{display:inline-block;padding:14px 26px;border-radius:4px;font-weight:600;font-size:.95rem;transition:all .2s}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-2)}
+.btn-line{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(201,162,75,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff}
+.mark{height:44px;width:auto;display:block}
+.logo-text{line-height:1.1}
+.logo-text strong{display:block;font-family:"Playfair Display",serif;font-size:1.05rem;letter-spacing:.04em}
+.logo-text span{font-size:.62rem;letter-spacing:.3em;color:var(--gold)}
+.links{display:flex;gap:28px;align-items:center}
+.links a{color:#D8DDE6;font-size:.9rem;font-weight:500}
+.links a:hover,.links a.on{color:var(--gold)}
+.links .btn{padding:10px 18px;color:var(--navy)}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+.hero{background:linear-gradient(135deg,rgba(14,30,58,.97),rgba(22,41,77,.92)),repeating-linear-gradient(45deg,transparent 0 38px,rgba(201,162,75,.06) 38px 39px);color:#fff;padding:100px 0 110px}
+.hero h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3.3rem);max-width:820px;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:#C3CAD6;font-size:1.1rem;max-width:620px;margin-bottom:34px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero-grid img{width:100%;border-radius:8px;display:block;border:1px solid rgba(201,162,75,.35)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:48px;margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+.stats div strong{display:block;font-family:"Playfair Display",serif;font-size:1.4rem;color:var(--gold)}
+.stats div span{font-size:.85rem;color:#AEB7C6}
+section{padding:92px 0}
+.head{max-width:660px;margin-bottom:50px}
+.head h2{font-size:clamp(1.8rem,3.5vw,2.4rem);margin:10px 0 14px}
+.head p{color:var(--muted)}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{border:1px solid var(--line);padding:32px 28px;border-radius:6px;background:#fff;border-top:3px solid transparent;transition:all .2s}
+.card:hover{border-top-color:var(--gold);box-shadow:0 12px 30px rgba(14,30,58,.08);transform:translateY(-2px)}
+.card .tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.card h3{font-size:1.25rem;margin:8px 0 10px}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:12px}
+.card li{list-style:none;font-size:.9rem;color:var(--muted);padding:5px 0 5px 18px;position:relative}
+.card li:before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.units{background:var(--soft)}
+.unit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.unit{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:0;text-align:center}
+.unit img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.unit svg{width:40px;height:26px;stroke:var(--navy);fill:none;stroke-width:1.6;margin-bottom:10px}
+.unit strong{display:block;font-size:.98rem;color:var(--navy);padding:14px 10px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.panel{background:var(--navy);color:#fff;padding:44px;border-radius:6px}
+.panel h3{color:var(--gold);font-size:1.35rem;margin-bottom:18px}
+.panel li{list-style:none;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;gap:12px;color:#D8DDE6;font-size:.95rem}
+.panel li:last-child{border:0}
+.panel li:before{content:"";flex:0 0 8px;height:8px;margin-top:9px;background:var(--gold);transform:rotate(45deg)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.step{counter-increment:s;padding-top:20px;border-top:2px solid var(--line)}
+.step:before{content:"0" counter(s);font-family:"Playfair Display",serif;font-size:2rem;color:var(--gold);display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.92rem}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:960px}
+.tag{position:absolute;top:10px;left:10px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:3px;color:#fff}
+.tag.before{background:#8A3A2E}.tag.after{background:#2F6B4F}
+.shot{position:relative;border-radius:6px;overflow:hidden;background:var(--soft);border:1px solid var(--line);margin:0}
+.shot img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot span{color:#9AA3B2;font-size:.85rem;padding:0 14px;text-align:center}
+.contact{background:var(--navy);color:#fff}
+.contact h2{color:#fff}
+.contact .head p{color:#AEB7C6}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+.info a,.info div{display:flex;gap:14px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1);color:#fff}
+.info svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.7;flex:0 0 22px}
+.info small{display:block;color:#AEB7C6;font-size:.78rem}
+form{background:#fff;border-radius:6px;padding:32px;color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:.8rem;font-weight:600;margin:0 0 6px;color:var(--navy)}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;font:inherit;font-size:.95rem;margin-bottom:16px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+form button{width:100%;border:0;cursor:pointer}
+footer{background:#0A1629;color:#8B95A7;padding:28px 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center}
+footer img{height:70px;width:auto;display:block;opacity:.95}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--navy);flex-direction:column;padding:20px;gap:18px}
+  .links.open{display:flex}
+  .menu-btn{display:block}
+  .seg,.split,.contact-grid,.gallery{grid-template-columns:1fr}
+  .unit-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr 1fr}
+  section{padding:70px 0}
+  .hero{padding:76px 0}
+}
+@media (max-width:520px){.steps,.row{grid-template-columns:1fr}.stats{gap:26px}form{padding:22px}.panel{padding:28px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <img src="logo-mark-light.png" alt="NR Development Group" class="mark">
+      <div class="logo-text"><strong>NR DEVELOPMENT</strong><span>GROUP LLC</span></div>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">&#9776;</button>
+    <nav class="links">
+      <a href="index.html">Construction</a>
+      <a href="projects.html">Previous Projects</a>
+      <a href="detailing.html" class="on">Fleet Detailing</a>
+      <a href="index.html#process">Process</a>
+      <a href="#quote" class="btn btn-gold">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">N&amp;N Make Ready Services</div>
+      <h1>Fleet detailing built for <em>volume, schedule, and inspection.</em></h1>
+      <p>We service rental fleets, dealerships, and commercial vehicles across Southeast Texas and Greater Houston &mdash; on site, on a set rotation, with documented quality control on every unit.</p>
+      <div class="cta">
+        <a href="#quote" class="btn btn-gold">Request a Quote</a>
+        <a href="tel:+14094541750" class="btn btn-line">Call (409) 454-1750</a>
+      </div>
+    </div>
+    <img src="./fleet-hero.jpg" alt="Line of commercial fleet trucks detailed and staged at the yard">
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div><strong>Multiple Yards</strong><span>Servicing several locations in this market</span></div>
+      <div><strong>Tiered Pricing</strong><span>Rates scale with your volume</span></div>
+      <div><strong>On-Site Service</strong><span>We come to your lot</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Who We Service</div>
+      <h2>Built around how your operation actually runs</h2>
+      <p>Different customers, different turnaround requirements. We work to yours.</p>
+    </div>
+    <div class="seg">
+      <div class="card">
+        <div class="tag">Primary</div>
+        <h3>Rental &amp; Commercial Fleets</h3>
+        <p>Recurring on-site detailing for rental yards and company fleets, scheduled on a rotation that fits your turn cycle.</p>
+        <ul>
+          <li>Set weekly or bi-weekly rotations</li>
+          <li>Ready-line and return-to-yard units</li>
+          <li>Documented QC on every unit</li>
+          <li>One invoice per cycle, itemized</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="tag">Primary</div>
+        <h3>Dealership Make Ready</h3>
+        <p>Front-line and lot-ready reconditioning that keeps inventory photo-ready and moving.</p>
+        <ul>
+          <li>New and pre-owned reconditioning</li>
+          <li>Lot-wide refreshes and photo prep</li>
+          <li>Delivery-day detail</li>
+          <li>Volume turnaround without bottlenecks</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="tag">Also Available</div>
+        <h3>Individual Vehicles</h3>
+        <p>Full-detail service for personal trucks and cars, including work vehicles kept in personal name.</p>
+        <ul>
+          <li>Interior and exterior detail</li>
+          <li>Mobile service in the local area</li>
+          <li>Scheduled by appointment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="units">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What We Handle</div>
+      <h2>Every unit type on your yard</h2>
+      <p>Pricing is set per unit type, because a tractor-trailer is not a pickup.</p>
+    </div>
+    <div class="unit-grid">
+      <figure class="unit"><img src="./unit-flatbed.jpg" alt="Flatbeds detailed on site" loading="lazy"><strong>Flatbeds</strong></figure>
+      <figure class="unit"><img src="./unit-stake-bed.jpg" alt="Stake Beds detailed on site" loading="lazy"><strong>Stake Beds</strong></figure>
+      <figure class="unit"><img src="./unit-service-truck.jpg" alt="Service Trucks detailed on site" loading="lazy"><strong>Service Trucks</strong></figure>
+      <figure class="unit"><img src="./unit-regular-cab.jpg" alt="Regular Cabs detailed on site" loading="lazy"><strong>Regular Cabs</strong></figure>
+      <figure class="unit"><img src="./unit-tractor-trailer.jpg" alt="Tractor-Trailers detailed on site" loading="lazy"><strong>Tractor-Trailers</strong></figure>
+      <figure class="unit"><img src="./unit-boom-truck.jpg" alt="Boom and Crane Trucks detailed on site" loading="lazy"><strong>Boom &amp; Crane Trucks</strong></figure>
+    </div>
+  </div>
+</section>
+
+<section id="quality">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Quality Control</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.4rem);margin:10px 0 18px">Documented, not promised</h2>
+      <p style="color:var(--muted);margin-bottom:16px">Anyone can say they do good work. We log it. Every unit runs through a checklist, and your service records are available whenever you want to see them.</p>
+      <p style="color:var(--muted)">That matters when your regional manager asks what you're paying for, and it means problems get caught by us before they get caught by you.</p>
+    </div>
+    <div class="panel">
+      <h3>How we protect your standard</h3>
+      <ul>
+        <li>Written QC checklist on every unit</li>
+        <li>Service logs kept per yard and per cycle</li>
+        <li>Inspection records available on request</li>
+        <li>Consistent crews who learn your standard</li>
+        <li>Direct line to the owner, not a call center</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="units">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">How It Works</div>
+      <h2>From first call to standing rotation</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Discovery</h3><p>We learn your volume, unit mix, and turn cycle.</p></div>
+      <div class="step"><h3>Walkthrough</h3><p>We see the yard and confirm what the work actually involves.</p></div>
+      <div class="step"><h3>Proposal</h3><p>Tiered pricing by unit type and volume, in writing.</p></div>
+      <div class="step"><h3>Rotation</h3><p>We run the schedule and keep you updated.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Proof of Work</div>
+      <h2>Before and after, same unit</h2>
+      <p>Fuel tank and steps on a tractor unit. This is what a detail actually changes.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot"><img src="./detail-before.jpg" alt="Fuel tank and steps before detailing, heavily soiled" loading="lazy"><span class="tag before">Before</span></figure>
+      <figure class="shot"><img src="./detail-after.jpg" alt="Same fuel tank and steps after detailing, polished clean" loading="lazy"><span class="tag after">After</span></figure>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="contact">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Get a Quote</div>
+      <h2>Tell us what your volume looks like</h2>
+      <p>Rates are tiered by volume and unit type. Give us a rough count and we'll put real numbers in front of you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info">
+        <a href="tel:+14094541750"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><small>Phone</small>(409) 454-1750</span></a>
+        <a href="mailto:nasario@nrdevelopmentgroup.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><span><small>Email</small>nasario@nrdevelopmentgroup.com</span></a>
+        <div><svg viewBox="0 0 24 24"><path d="M12 22s8-6.5 8-13a8 8 0 0 0-16 0c0 6.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><span><small>Service Area</small>Beaumont, Nederland, Port Arthur &amp; Greater Houston</span></div>
+      </div>
+      <form id="fq">
+        <div class="row">
+          <div><label for="n">Name</label><input id="n" required></div>
+          <div><label for="c">Company / Location</label><input id="c"></div>
+        </div>
+        <div class="row">
+          <div><label for="p">Phone</label><input id="p" type="tel"></div>
+          <div><label for="v">Approx. Units per Month</label><input id="v" placeholder="e.g. 40"></div>
+        </div>
+        <label for="t">Type of Account</label>
+        <select id="t"><option>Rental / Commercial Fleet</option><option>Dealership</option><option>Individual Vehicle</option><option>Other</option></select>
+        <label for="d">Unit Mix &amp; Notes</label>
+        <textarea id="d" rows="4" placeholder="Flatbeds, stake beds, service trucks, regular cabs, tractor-trailers, and how often you'd need service"></textarea>
+        <button type="submit" class="btn btn-gold">Send Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo-full-light.png" alt="NR Development Group LLC">
+    <span>&copy; <span id="yr"></span> NR Development Group LLC &bull; N&amp;N Make Ready Services</span>
+    <span>Nederland, Texas</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links').classList.remove('open')));
+document.getElementById('fq').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(id){return document.getElementById(id).value};
+  var body='Name: '+v('n')+'\nCompany/Location: '+v('c')+'\nPhone: '+v('p')+'\nApprox. units per month: '+v('v')+'\nAccount type: '+v('t')+'\n\nUnit mix & notes:\n'+v('d');
+  location.href='mailto:nasario@nrdevelopmentgroup.com?subject='+encodeURIComponent('Detailing Quote Request - '+v('t'))+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
