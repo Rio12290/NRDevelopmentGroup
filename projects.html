@@ -58,6 +58,7 @@ header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px
 .p-grid.four{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
 .shot{position:relative;margin:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in}
 .shot img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .3s}
+.shot img.tall{object-fit:cover;object-position:50% 20%}
 .shot:hover img{transform:scale(1.04)}
 .shot figcaption{padding:12px 14px;font-size:.85rem;color:var(--muted)}
 .pill{position:absolute;top:10px;left:10px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:3px;color:#fff}
@@ -121,7 +122,7 @@ footer img{height:70px;width:auto;display:block;opacity:.95}
     <div class="p-grid">
       <figure class="shot"><img src="./bath-remodel-01.jpg" alt="Before — original tub area" loading="lazy"><span class="pill before">Before</span><figcaption>Before — original tub area</figcaption></figure>
       <figure class="shot"><img src="./bath-remodel-03.jpg" alt="During — new tub set, walls prepped" loading="lazy"><span class="pill during">During</span><figcaption>During — new tub set, walls prepped</figcaption></figure>
-      <figure class="shot"><img src="./bath-remodel-04.jpg" alt="After — tiled tub surround, new vanity, and tile floor" loading="lazy"><span class="pill after">After</span><figcaption>After — tiled surround, new vanity, and tile floor</figcaption></figure>
+      <figure class="shot"><img class="tall" src="./bath-remodel-04.jpg" alt="After — tiled tub surround, new vanity, and tile floor" loading="lazy"><span class="pill after">After</span><figcaption>After — tiled surround, new vanity, and tile floor</figcaption></figure>
     </div>
   </article>
   <article class="project">
@@ -196,9 +197,9 @@ footer img{height:70px;width:auto;display:block;opacity:.95}
       <p>Years of buildup washed off the deck and coping, bringing the original concrete back without resurfacing or repair.</p>
     </div>
     <div class="p-grid">
-      <figure class="shot"><img src="./pool-deck-01.jpg" alt="Pool deck and patio before washing" loading="lazy"><figcaption>Pool deck and patio before washing</figcaption></figure>
+      <figure class="shot"><img src="./pool-deck-01.jpg" alt="Pool deck and patio before washing" loading="lazy"><figcaption>Before &mdash; stained, weathered concrete</figcaption></figure>
       <figure class="shot"><img src="./pool-deck-02.jpg" alt="Washing the deck around the pool" loading="lazy"><figcaption>Washing the deck around the pool</figcaption></figure>
-      <figure class="shot"><img src="./pool-deck-03.jpg" alt="Cleaned concrete, original finish back" loading="lazy"><figcaption>Cleaned concrete, original finish back</figcaption></figure>
+      <figure class="shot"><img src="./pool-deck-03.jpg" alt="Surface cleaner lifting years of buildup off the concrete" loading="lazy"><figcaption>Surface cleaner lifting years of buildup off the concrete</figcaption></figure>
     </div>
   </article>
   <article class="project">
